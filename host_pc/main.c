@@ -28,6 +28,10 @@
 #include <fcntl.h>
 #include <linux/input.h>
 
+#include <termios.h> // B115200, CS8 등 상수 정의
+#include <fcntl.h>   // O_RDWR , O_NOCTTY 등의 상수 정의
+#include <sys/poll.h>
+
 //using namespace std::chrono;
 //using namespace std;
 unsigned char elevator;
@@ -194,10 +198,177 @@ void *thread_routine(void *arg)
    gtk_main();
 }
 
+static const char *uart_device = "/dev/ttyACM0";
+
+
+
+int uart_init(const char *device)
+{
+   int fd;
+
+   struct termios newtio;
+
+   fd = open(device, O_RDWR | O_NOCTTY); // 디바이스를 open 한다.
+   if (0 > fd)
+   {
+      printf("%s  open error\n", device);
+   }
+   else
+   {
+      printf("%s  open\n", device);
+   }
+
+   // 시리얼 포트 통신 환경 설정
+   memset(&newtio, 0, sizeof(newtio));
+   newtio.c_cflag = B115200 | CS8 | CLOCAL | CREAD;
+   newtio.c_oflag = 0;
+   newtio.c_lflag = 0;
+   newtio.c_cc[VTIME] = 0;
+   newtio.c_cc[VMIN] = 1;
+
+   tcflush(fd, TCIFLUSH);
+   tcsetattr(fd, TCSANOW, &newtio);
+   fcntl(fd, F_SETFL, FNDELAY);
+
+   return fd;
+}
+
 extern char lidar_power;
 extern char motor_speed_R;
 extern char motor_speed_L;
 extern UART_STATE UART;
+
+uint16_t ch[7][2]={0};
+
+
+int cmd_mode = 0;
+void uart_reader(unsigned char * input,int count)
+{
+   for(int i=0; i< count; i++)
+   {
+      unsigned char data = input[i];
+      switch(cmd_mode)
+      {
+         case 0:
+            if(data == 'c')
+            {
+               cmd_mode++;
+            }
+         break;
+         case 1:
+            if(data == 'm')
+            {
+               cmd_mode++;
+            }
+         break;
+         case 2:
+            if(data == 'd')
+            {
+               cmd_mode++;
+            }
+         break;
+
+         case 3:
+         ch[0][0]=data;
+         cmd_mode++;
+         break;
+         case 4:
+         ch[0][1]=(uint16_t)data *256;
+         cmd_mode++;
+         break;
+         case 5:
+         ch[0][1]=ch[0][1] + (uint16_t)data;
+         cmd_mode++;
+         break;
+
+
+         case 6:
+         ch[1][0]=data;
+         cmd_mode++;
+         break;
+         case 7:
+         ch[1][1]=(uint16_t)data *256;
+         cmd_mode++;
+         break;
+         case 8:
+         ch[1][1]=ch[1][1] + (uint16_t)data;
+         cmd_mode++;
+         break;
+
+
+         case 9:
+         ch[2][0]=data;
+         cmd_mode++;
+         break;
+         case 10:
+         ch[2][1]=(uint16_t)data *256;
+         cmd_mode++;
+         break;
+         case 11:
+         ch[2][1]=ch[2][1] + (uint16_t)data;
+         cmd_mode++;
+         break;
+
+
+         case 12:
+         ch[3][0]=data;
+         cmd_mode++;
+         break;
+         case 13:
+         ch[3][1]=(uint16_t)data *256;
+         cmd_mode++;
+         break;
+         case 14:
+         ch[3][1]=ch[3][1] + (uint16_t)data;
+         cmd_mode++;
+         break;
+
+
+         case 15:
+         ch[4][0]=data;
+         cmd_mode++;
+         break;
+         case 16:
+         ch[4][1]=(uint16_t)data *256;
+         cmd_mode++;
+         break;
+         case 17:
+         ch[4][1]=ch[4][1] + (uint16_t)data;
+         cmd_mode++;
+         break;
+
+
+         case 18:
+         ch[5][0]=data;
+         cmd_mode++;
+         break;
+         case 19:
+         ch[5][1]=(uint16_t)data *256;
+         cmd_mode++;
+         break;
+         case 20:
+         ch[5][1]=ch[5][1] + (uint16_t)data;
+         cmd_mode++;
+         break;
+
+
+         case 21:
+         ch[6][0]=data;
+         cmd_mode++;
+         break;
+         case 22:
+         ch[6][1]=(uint16_t)data *256;
+         cmd_mode++;
+         break;
+         case 23:
+         ch[6][1]=ch[6][1] + (uint16_t)data;
+         cmd_mode=0;
+         break;
+         
+      }
+   }
+}
+
 
 int main(int argc, char **argv)
 {
@@ -206,12 +377,48 @@ int main(int argc, char **argv)
 
    display_init();
 
+   int uart_fd=uart_init(uart_device);
+   struct pollfd poll_events;
+   int poll_state;
+
+   poll_events.fd        = uart_fd;
+   poll_events.events    = POLLIN | POLLERR;          // 수신된 자료가 있는지, 에러가 있는지
+   poll_events.revents   = 0;
+
    while (1)
    {
-      draw();
-      sleep(1);
+      poll_state = poll((struct pollfd*)&poll_events,1,-1);
+
+      if (poll_state > 0)                             // 발생한 event 가 있음
+      {
+         if ( poll_events.revents & POLLIN)            // uart2 lidar 수신
+         {
+            int uart2_cnt = read( uart_fd, buf_uart2, 1000);
+            uart_reader(buf_uart2,uart2_cnt);
+
+            draw(ch);
+         }
+         if ( poll_events.revents & POLLERR)      // event 가 에러?
+         {
+            printf( "uart2 에 에러가 발생, 프로그램 종료");
+            return -1;
+         }
+      }
+            
+      else if(poll_state < 0)
+      {
+          printf("Critial Error!\n");
+          return -1;
+      }
+      else if(poll_state == 0)
+      {
+          printf("wait...\n");
+      }    
+      //draw();
+      //sleep(1);
    }
    fd_free();
    tcpip_free();
    return 0;
 }
+

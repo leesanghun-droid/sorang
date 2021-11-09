@@ -51,7 +51,7 @@ if(display_x11==True)
 
   fontinfo = XLoadQueryFont(disp,"12x24");
 
-  XAllocNamedColor(disp, DefaultColormap(disp, screen),"red",
+  XAllocNamedColor(disp, DefaultColormap(disp, screen),"yellow",
                   &color,&dummy);
 
   gr_values.font = fontinfo->fid;
@@ -62,9 +62,34 @@ if(display_x11==True)
 }
 }
 
-void draw()
+void draw(u_int16_t arr[][2])
 {
   /////////////////  draw_origin CIRCLE START //////////////////////
+
+  printf("%d\r\n",arr[0][1]);
+  printf("%d\r\n",arr[1][1]);
+  printf("%d\r\n",arr[2][1]);
+  printf("%d\r\n",arr[3][1]);
+  printf("%d\r\n",arr[4][1]);
+  printf("%d\r\n",arr[5][1]);
+  printf("%d\r\n",arr[6][1]);
+
+  double d_ch[7][2]={0};
+
+  for(int i=0;i<7;i++)
+  {
+    d_ch[i][0]=(double)arr[i][0];
+    d_ch[i][1]=(double)arr[i][1]*0.02929;
+  }
+
+  printf("%0.3f\r\n",d_ch[0][1]);
+  printf("%0.3f\r\n",d_ch[1][1]);
+  printf("%0.3f\r\n",d_ch[2][1]);
+  printf("%0.3f\r\n",d_ch[3][1]);
+  printf("%0.3f\r\n",d_ch[4][1]);
+  printf("%0.3f\r\n",d_ch[5][1]);
+  printf("%0.3f\r\n",d_ch[6][1]);
+
 
 
       for(int s =0; s<500; s+=83)
@@ -90,6 +115,75 @@ void draw()
           }
 
 
+  float ch1_y = -sin(((90)*PI)/180)*(d_ch[0][1]/5)*83+y_center;
+  float ch1_x = x_center;
+
+  if(ch1_y>980)
+  ch1_y=980;
+  if(ch1_x>980)
+  ch1_x=980;
+
+  float ch2_y = -sin(((30)*PI)/180)*(d_ch[1][1]/5)*83+y_center;
+  float ch2_x = -cos(((30)*PI)/180)*(d_ch[1][1]/5)*83+x_center;
+
+    if(ch2_y>980)
+  ch2_y=980;
+  if(ch2_x>980)
+  ch2_x=980;
+
+
+  float ch3_y = sin(((30)*PI)/180)*(d_ch[2][1]/5)*83+y_center;
+  float ch3_x = -cos(((30)*PI)/180)*(d_ch[2][1]/5)*83+x_center;
+
+
+  if(ch3_y>980)
+  ch3_y=980;
+  if(ch3_x>980)
+  ch3_x=980;
+
+
+  float ch4_y = sin(((90)*PI)/180)*(d_ch[4][1]/5)*83+y_center;
+  float ch4_x = x_center;
+
+
+  if(ch4_y>980)
+  ch4_y=980;
+  if(ch4_x>980)
+  ch4_x=980;
+
+
+  float ch5_y = -sin(((30)*PI)/180)*(d_ch[4][1]/5)*83+y_center;
+  float ch5_x = cos(((30)*PI)/180)*(d_ch[4][1]/5)*83+x_center;
+  
+  if(ch5_y>980)
+  ch5_y=980;
+  if(ch5_x>980)
+  ch5_x=980;
+
+
+  float ch6_y = sin(((30)*PI)/180)*(d_ch[5][1]/5)*83+y_center;
+  float ch6_x = cos(((30)*PI)/180)*(d_ch[5][1]/5)*83+x_center;
+
+  if(ch6_y>980)
+  ch6_y=980;
+  if(ch6_x>980)
+  ch6_x=980;
+
+
+
+  for(int i=0;i<20;i++)
+  for(int j=0;j<20;j++)
+  {
+    byte_array[(int)ch1_y+j][(int)ch1_x+i]=0xFF0000;
+    byte_array[(int)ch2_y+j][(int)ch2_x+i]=0xFF0000;
+    byte_array[(int)ch3_y+j][(int)ch3_x+i]=0xFF0000;
+    byte_array[(int)ch4_y+j][(int)ch4_x+i]=0xFF0000;
+    byte_array[(int)ch5_y+j][(int)ch5_x+i]=0xFF0000;
+    byte_array[(int)ch6_y+j][(int)ch6_x+i]=0xF0000F;
+  }
+
+
+
 /////////////////  draw_origin CIRCLE END //////////////////////
 
 
@@ -109,10 +203,12 @@ void draw()
           }
         
         XPutImage(disp, win, gc, image, 0, 0, 0, 0, width, heigth);
-        XDrawString(disp, win, gc,500, 200, "test", 4);
-        XDrawString(disp, win, gc,500, 300, "test", 4);
-        XDrawString(disp, win, gc,500, 400, "test", 4);
-        XDrawString(disp, win, gc,500, 500, "test", 4);
+        XDrawString(disp, win, gc,500, 0, "35M", 4);
+        XDrawString(disp, win, gc,500, 73, "30M", 4);
+        XDrawString(disp, win, gc,500, 158, "25M", 4);
+        XDrawString(disp, win, gc,500, 241, "15M", 4);
+        XDrawString(disp, win, gc,500, 324, "10M", 4);
+        XDrawString(disp, win, gc,500, 407, "5M", 4);
         XFlush(disp);
 }
 /*

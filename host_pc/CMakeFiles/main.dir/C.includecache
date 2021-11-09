@@ -83,6 +83,12 @@ fcntl.h
 -
 linux/input.h
 -
+termios.h
+-
+fcntl.h
+-
+sys/poll.h
+-
 
 /home/lsh/work9/sorang/host_pc/teminel_key/esc_key.h
 
