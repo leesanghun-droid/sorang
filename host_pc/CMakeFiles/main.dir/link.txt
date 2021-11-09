@@ -1,0 +1,1 @@
+/usr/bin/cc   -rdynamic CMakeFiles/main.dir/main.c.o  -o main  libuart.a libtcpip.a libpoll.a libesc_key.a libargu.a libtimer.a -lrt libdisplay.a liblidar_law.a -lX11 -lm libcmd.a libmotor.a libmove.a -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -lharfbuzz -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0 -pthread 

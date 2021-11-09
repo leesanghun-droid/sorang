@@ -1,0 +1,2 @@
+/usr/bin/ar qc libpoll.a  CMakeFiles/poll.dir/com/poll.c.o
+/usr/bin/ranlib libpoll.a

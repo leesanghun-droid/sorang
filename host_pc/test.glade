@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.38.2 -->
+<interface>
+  <requires lib="gtk+" version="3.24"/>
+  <object class="GtkAdjustment" id="adjustment1">
+    <property name="upper">255</property>
+    <property name="step-increment">1</property>
+    <property name="page-increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="adjustment2">
+    <property name="upper">255</property>
+    <property name="value">255</property>
+    <property name="step-increment">1</property>
+    <property name="page-increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="adjustment3">
+    <property name="lower">-180</property>
+    <property name="upper">180</property>
+    <property name="step-increment">0.5</property>
+    <property name="page-increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="adjustment4">
+    <property name="lower">-180</property>
+    <property name="upper">180</property>
+    <property name="step-increment">0.5</property>
+    <property name="page-increment">10</property>
+  </object>
+  <object class="GtkApplicationWindow" id="main_window">
+    <property name="width-request">350</property>
+    <property name="height-request">400</property>
+    <property name="can-focus">False</property>
+    <child>
+      <object class="GtkFixed">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <child>
+          <object class="GtkButton" id="button_up">
+            <property name="label" translatable="yes">up</property>
+            <property name="width-request">80</property>
+            <property name="height-request">30</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <signal name="pressed" handler="on_button_up_pressed" swapped="no"/>
+            <signal name="released" handler="on_button_up_released" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">130</property>
+            <property name="y">20</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="button_down">
+            <property name="label" translatable="yes">down</property>
+            <property name="width-request">80</property>
+            <property name="height-request">30</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <signal name="pressed" handler="on_button_down_pressed" swapped="no"/>
+            <signal name="released" handler="on_button_down_released" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">130</property>
+            <property name="y">70</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="button_left">
+            <property name="label" translatable="yes">left</property>
+            <property name="width-request">80</property>
+            <property name="height-request">30</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <signal name="pressed" handler="on_button_left_pressed" swapped="no"/>
+            <signal name="released" handler="on_button_left_released" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">40</property>
+            <property name="y">70</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="button_right">
+            <property name="label" translatable="yes">right</property>
+            <property name="width-request">80</property>
+            <property name="height-request">30</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <signal name="pressed" handler="on_button_right_pressed" swapped="no"/>
+            <signal name="released" handler="on_button_right_released" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">220</property>
+            <property name="y">70</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkToggleButton" id="left_brush">
+            <property name="label" translatable="yes">left_brush</property>
+            <property name="width-request">120</property>
+            <property name="height-request">40</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <signal name="toggled" handler="on_left_brush_toggled" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">40</property>
+            <property name="y">150</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkToggleButton" id="right_brush">
+            <property name="label" translatable="yes">right_brush</property>
+            <property name="width-request">120</property>
+            <property name="height-request">40</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <signal name="toggled" handler="on_right_brush_toggled" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">40</property>
+            <property name="y">200</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkToggleButton" id="main_brush">
+            <property name="label" translatable="yes">main_brush</property>
+            <property name="width-request">120</property>
+            <property name="height-request">40</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <signal name="toggled" handler="on_main_brush_toggled" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">40</property>
+            <property name="y">250</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkToggleButton" id="elevator">
+            <property name="label" translatable="yes">elevator</property>
+            <property name="width-request">120</property>
+            <property name="height-request">40</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <signal name="toggled" handler="on_elevator_toggled" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">200</property>
+            <property name="y">150</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkToggleButton" id="LIDAR">
+            <property name="label" translatable="yes">LIDAR</property>
+            <property name="width-request">120</property>
+            <property name="height-request">40</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <signal name="toggled" handler="on_LIDAR_toggled" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">200</property>
+            <property name="y">200</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkToggleButton" id="water_pump">
+            <property name="label" translatable="yes">water_pump</property>
+            <property name="width-request">120</property>
+            <property name="height-request">40</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <signal name="toggled" handler="on_water_pump_toggled" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">200</property>
+            <property name="y">250</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkScale" id="fan">
+            <property name="name">fan</property>
+            <property name="width-request">200</property>
+            <property name="height-request">50</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="adjustment">adjustment1</property>
+            <property name="show-fill-level">True</property>
+            <property name="fill-level">255</property>
+            <property name="round-digits">1</property>
+            <property name="digits">0</property>
+            <signal name="value-changed" handler="on_fan_value_changed" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">100</property>
+            <property name="y">300</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width-request">100</property>
+            <property name="height-request">80</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="label" translatable="yes">FAN</property>
+          </object>
+          <packing>
+            <property name="x">20</property>
+            <property name="y">290</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width-request">100</property>
+            <property name="height-request">80</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="label" translatable="yes">WHEEL</property>
+          </object>
+          <packing>
+            <property name="x">20</property>
+            <property name="y">350</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkScale" id="wheel">
+            <property name="name">wheel</property>
+            <property name="width-request">200</property>
+            <property name="height-request">50</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="adjustment">adjustment2</property>
+            <property name="show-fill-level">True</property>
+            <property name="fill-level">255</property>
+            <property name="round-digits">1</property>
+            <property name="digits">0</property>
+            <signal name="value-changed" handler="on_wheel_value_changed" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">100</property>
+            <property name="y">355</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkScale" id="lidar_rotate">
+            <property name="width-request">600</property>
+            <property name="height-request">50</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="adjustment">adjustment3</property>
+            <property name="show-fill-level">True</property>
+            <property name="fill-level">180</property>
+            <property name="round-digits">1</property>
+            <signal name="value-changed" handler="on_lidar_rotate_value_changed" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">100</property>
+            <property name="y">410</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width-request">100</property>
+            <property name="height-request">80</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="label" translatable="yes">Lidar_rotate</property>
+          </object>
+          <packing>
+            <property name="x">14</property>
+            <property name="y">403</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkScale" id="gyro_default">
+            <property name="width-request">600</property>
+            <property name="height-request">50</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="adjustment">adjustment4</property>
+            <property name="fill-level">180</property>
+            <property name="round-digits">1</property>
+            <signal name="value-changed" handler="on_gyro_default_value_changed" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">100</property>
+            <property name="y">465</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width-request">100</property>
+            <property name="height-request">80</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="label" translatable="yes">GYRO_default</property>
+          </object>
+          <packing>
+            <property name="x">13</property>
+            <property name="y">458</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

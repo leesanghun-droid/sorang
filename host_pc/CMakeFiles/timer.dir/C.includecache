@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/lsh/work9/sorang/host_pc/timer/timer.c
+unistd.h
+-
+time.h
+-
+signal.h
+-
+stdio.h
+-
+signal.h
+-
+stdio.h
+-
+string.h
+-
+sys/time.h
+-
+

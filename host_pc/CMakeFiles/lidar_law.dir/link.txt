@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblidar_law.a  CMakeFiles/lidar_law.dir/lidar/lidar_law.c.o
+/usr/bin/ranlib liblidar_law.a

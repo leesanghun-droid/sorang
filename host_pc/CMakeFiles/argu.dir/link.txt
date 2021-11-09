@@ -1,0 +1,2 @@
+/usr/bin/ar qc libargu.a  CMakeFiles/argu.dir/argument/argu.c.o
+/usr/bin/ranlib libargu.a

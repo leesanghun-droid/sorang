@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/lsh/work9/sorang/host_pc/com/poll.c
+../include/main.h
+/home/lsh/work9/sorang/host_pc/include/main.h
+sys/poll.h
+-
+uart.h
+/home/lsh/work9/sorang/host_pc/com/uart.h
+tcpip.h
+/home/lsh/work9/sorang/host_pc/com/tcpip.h
+../lidar/lidar_law.h
+/home/lsh/work9/sorang/host_pc/lidar/lidar_law.h
+../display/display.h
+/home/lsh/work9/sorang/host_pc/display/display.h
+
+/home/lsh/work9/sorang/host_pc/com/tcpip.h
+
+/home/lsh/work9/sorang/host_pc/com/uart.h
+
+/home/lsh/work9/sorang/host_pc/display/display.h
+
+/home/lsh/work9/sorang/host_pc/include/main.h
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+unistd.h
+-
+
+/home/lsh/work9/sorang/host_pc/lidar/lidar_law.h
+

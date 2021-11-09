@@ -1,0 +1,2 @@
+/usr/bin/ar qc libesc_key.a  CMakeFiles/esc_key.dir/teminel_key/esc_key.c.o
+/usr/bin/ranlib libesc_key.a

@@ -1,0 +1,1 @@
+void input_parameter(int argc, char **argv);

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libtcpip.a  CMakeFiles/tcpip.dir/com/tcpip.c.o
+/usr/bin/ranlib libtcpip.a

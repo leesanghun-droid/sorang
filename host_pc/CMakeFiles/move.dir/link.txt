@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmove.a  CMakeFiles/move.dir/move/move.c.o
+/usr/bin/ranlib libmove.a

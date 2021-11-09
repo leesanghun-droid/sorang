@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/lsh/work9/sorang/host_pc/com/tcpip.c
+../include/main.h
+/home/lsh/work9/sorang/host_pc/include/main.h
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+unistd.h
+-
+sys/types.h
+-
+sys/socket.h
+-
+netinet/in.h
+-
+netdb.h
+-
+
+/home/lsh/work9/sorang/host_pc/include/main.h
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+unistd.h
+-
+

@@ -1,0 +1,1 @@
+void cal_raw_map(unsigned char * input);
