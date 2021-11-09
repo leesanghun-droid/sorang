@@ -174,12 +174,18 @@ void draw(u_int16_t arr[][2])
   for(int i=0;i<20;i++)
   for(int j=0;j<20;j++)
   {
-    byte_array[(int)ch1_y+j][(int)ch1_x+i]=0xFF0000;
-    byte_array[(int)ch2_y+j][(int)ch2_x+i]=0xFF0000;
-    byte_array[(int)ch3_y+j][(int)ch3_x+i]=0xFF0000;
-    byte_array[(int)ch4_y+j][(int)ch4_x+i]=0xFF0000;
-    byte_array[(int)ch5_y+j][(int)ch5_x+i]=0xFF0000;
-    byte_array[(int)ch6_y+j][(int)ch6_x+i]=0xF0000F;
+    if(d_ch[0][0]==1)
+      byte_array[(int)ch1_y+j][(int)ch1_x+i]=0xFF0000;
+    if(d_ch[1][0]==1)
+      byte_array[(int)ch2_y+j][(int)ch2_x+i]=0xFF0000;
+    if(d_ch[2][0]==1)
+      byte_array[(int)ch3_y+j][(int)ch3_x+i]=0xFF0000;
+    if(d_ch[3][0]==1)
+      byte_array[(int)ch4_y+j][(int)ch4_x+i]=0xFF0000;
+    if(d_ch[4][0]==1)
+      byte_array[(int)ch5_y+j][(int)ch5_x+i]=0xFF0000;
+    if(d_ch[5][0]==1)
+      byte_array[(int)ch6_y+j][(int)ch6_x+i]=0xF0000F;
   }
 
 
@@ -208,7 +214,8 @@ void draw(u_int16_t arr[][2])
         XDrawString(disp, win, gc,500, 158, "25M", 4);
         XDrawString(disp, win, gc,500, 241, "15M", 4);
         XDrawString(disp, win, gc,500, 324, "10M", 4);
-        XDrawString(disp, win, gc,500, 407, "5M", 4);
+        XDrawString(disp, win, gc,500, 407, "5M", 2);
+
         XFlush(disp);
 }
 /*

@@ -195,7 +195,7 @@ void *thread_routine(void *arg)
    g_object_unref(builder);
    gtk_widget_show(window);
    gtk_window_move((GtkWindow*)window,350+250,50);
-   gtk_main();
+   //gtk_main();
 }
 
 static const char *uart_device = "/dev/ttyACM0";
