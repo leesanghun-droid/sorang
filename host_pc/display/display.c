@@ -208,13 +208,18 @@ void draw(u_int16_t arr[][2])
             byte_array[y][x]=0x000000; //b + g*256 + r*65536
           }
         
+        char ch7[100]={0};
         XPutImage(disp, win, gc, image, 0, 0, 0, 0, width, heigth);
-        XDrawString(disp, win, gc,500, 0, "35M", 4);
-        XDrawString(disp, win, gc,500, 73, "30M", 4);
-        XDrawString(disp, win, gc,500, 158, "25M", 4);
+        XDrawString(disp, win, gc,500, 0, "30M", 4);
+        XDrawString(disp, win, gc,500, 73, "25M", 4);
+        XDrawString(disp, win, gc,500, 158, "20M", 4);
         XDrawString(disp, win, gc,500, 241, "15M", 4);
         XDrawString(disp, win, gc,500, 324, "10M", 4);
         XDrawString(disp, win, gc,500, 407, "5M", 2);
+
+        sprintf(ch7,"%0.1f",d_ch[6][1]);
+
+        XDrawString(disp, win, gc,940, 850, ch7, 4);
 
         XFlush(disp);
 }
