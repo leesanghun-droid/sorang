@@ -51,7 +51,7 @@ if(display_x11==True)
 
   XInitImage(image);
 
-  fontinfo = XLoadQueryFont(disp,"12x24");
+  fontinfo = XLoadQueryFont(disp,"6x13");
 
   XAllocNamedColor(disp, DefaultColormap(disp, screen),"yellow",
                   &color,&dummy);
@@ -268,11 +268,11 @@ for(int j=0; j<=row_num; j++)
 
 
         XPutImage(disp, win, gc, image, 0, 0, 0, 0, width, heigth);
-        XDrawString(disp, win, gc,500, 490-circle_size*6, "30M", 4);
-        XDrawString(disp, win, gc,500, 490-circle_size*5, "25M", 4);
-        XDrawString(disp, win, gc,500, 490-circle_size*4, "20M", 4);
-        XDrawString(disp, win, gc,500, 490-circle_size*3, "15M", 4);
-        XDrawString(disp, win, gc,500, 490-circle_size*2, "10M", 4);
+        XDrawString(disp, win, gc,500, 490-circle_size*6, "30M", 3);
+        XDrawString(disp, win, gc,500, 490-circle_size*5, "25M", 3);
+        XDrawString(disp, win, gc,500, 490-circle_size*4, "20M", 3);
+        XDrawString(disp, win, gc,500, 490-circle_size*3, "15M", 3);
+        XDrawString(disp, win, gc,500, 490-circle_size*2, "10M", 3);
         XDrawString(disp, win, gc,500, 490-circle_size*1, "5M", 2);
 
 ///////////////////// num ////////////////
@@ -296,7 +296,15 @@ for(int j=0; j<=row_num; j++)
         for(int i=0;i<6;i++)
         {
           sprintf(law_data_text[i],"%d",arr[i][1]);
-          XDrawString(disp, win, gc,table_start_point_x+(column_legth/row_num)*2 + (column_legth/row_num)/2, table_start_point_y+(row_legth/column_num)*(i+1)+(row_legth/column_num)/2+10, law_data_text[i], sizeof(law_data_text[i])/sizeof(char));
+          int num = arr[i][1];
+          int num_size=1;
+          while(num>=10)
+          {
+            num=num/10;
+            num_size++;
+          }
+          
+          XDrawString(disp, win, gc,table_start_point_x+(column_legth/row_num)*2 + (column_legth/row_num)/2, table_start_point_y+(row_legth/column_num)*(i+1)+(row_legth/column_num)/2+10, law_data_text[i], num_size);
         }
 
 
@@ -310,3 +318,4 @@ for(int j=0; j<=row_num; j++)
 }
 
 /////////////////  DRAW END //////////////////////
+

@@ -390,17 +390,17 @@ CMakeFiles/move.dir/clean:
 # Target rules for target CMakeFiles/main.dir
 
 # All Build rule for target.
-CMakeFiles/main.dir/all: CMakeFiles/uart.dir/all
+CMakeFiles/main.dir/all: CMakeFiles/tcpip.dir/all
 CMakeFiles/main.dir/all: CMakeFiles/poll.dir/all
+CMakeFiles/main.dir/all: CMakeFiles/uart.dir/all
+CMakeFiles/main.dir/all: CMakeFiles/argu.dir/all
+CMakeFiles/main.dir/all: CMakeFiles/esc_key.dir/all
+CMakeFiles/main.dir/all: CMakeFiles/cmd.dir/all
 CMakeFiles/main.dir/all: CMakeFiles/move.dir/all
 CMakeFiles/main.dir/all: CMakeFiles/lidar_law.dir/all
-CMakeFiles/main.dir/all: CMakeFiles/tcpip.dir/all
-CMakeFiles/main.dir/all: CMakeFiles/argu.dir/all
 CMakeFiles/main.dir/all: CMakeFiles/timer.dir/all
 CMakeFiles/main.dir/all: CMakeFiles/motor.dir/all
 CMakeFiles/main.dir/all: CMakeFiles/display.dir/all
-CMakeFiles/main.dir/all: CMakeFiles/esc_key.dir/all
-CMakeFiles/main.dir/all: CMakeFiles/cmd.dir/all
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/depend
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lsh/work12/sorang/host_pc/CMakeFiles --progress-num=11,12 "Built target main"
