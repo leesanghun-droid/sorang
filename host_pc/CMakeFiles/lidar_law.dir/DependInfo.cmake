@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/lsh/work9/sorang/host_pc/lidar/lidar_law.c" "/home/lsh/work9/sorang/host_pc/CMakeFiles/lidar_law.dir/lidar/lidar_law.c.o"
+  "/home/lsh/work12/sorang/host_pc/lidar/lidar_law.c" "/home/lsh/work12/sorang/host_pc/CMakeFiles/lidar_law.dir/lidar/lidar_law.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

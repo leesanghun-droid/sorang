@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/lsh/work9/sorang/host_pc/com/poll.c" "/home/lsh/work9/sorang/host_pc/CMakeFiles/poll.dir/com/poll.c.o"
+  "/home/lsh/work12/sorang/host_pc/com/poll.c" "/home/lsh/work12/sorang/host_pc/CMakeFiles/poll.dir/com/poll.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

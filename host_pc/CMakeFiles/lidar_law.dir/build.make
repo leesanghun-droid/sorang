@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lsh/work9/sorang/host_pc
+CMAKE_SOURCE_DIR = /home/lsh/work12/sorang/host_pc
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lsh/work9/sorang/host_pc
+CMAKE_BINARY_DIR = /home/lsh/work12/sorang/host_pc
 
 # Include any dependencies generated for this target.
 include CMakeFiles/lidar_law.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/lidar_law.dir/flags.make
 
 CMakeFiles/lidar_law.dir/lidar/lidar_law.c.o: CMakeFiles/lidar_law.dir/flags.make
 CMakeFiles/lidar_law.dir/lidar/lidar_law.c.o: lidar/lidar_law.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lsh/work9/sorang/host_pc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/lidar_law.dir/lidar/lidar_law.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lidar_law.dir/lidar/lidar_law.c.o   -c /home/lsh/work9/sorang/host_pc/lidar/lidar_law.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lsh/work12/sorang/host_pc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/lidar_law.dir/lidar/lidar_law.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lidar_law.dir/lidar/lidar_law.c.o   -c /home/lsh/work12/sorang/host_pc/lidar/lidar_law.c
 
 CMakeFiles/lidar_law.dir/lidar/lidar_law.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lidar_law.dir/lidar/lidar_law.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lsh/work9/sorang/host_pc/lidar/lidar_law.c > CMakeFiles/lidar_law.dir/lidar/lidar_law.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lsh/work12/sorang/host_pc/lidar/lidar_law.c > CMakeFiles/lidar_law.dir/lidar/lidar_law.c.i
 
 CMakeFiles/lidar_law.dir/lidar/lidar_law.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lidar_law.dir/lidar/lidar_law.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lsh/work9/sorang/host_pc/lidar/lidar_law.c -o CMakeFiles/lidar_law.dir/lidar/lidar_law.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lsh/work12/sorang/host_pc/lidar/lidar_law.c -o CMakeFiles/lidar_law.dir/lidar/lidar_law.c.s
 
 # Object files for target lidar_law
 lidar_law_OBJECTS = \
@@ -80,7 +80,7 @@ lidar_law_EXTERNAL_OBJECTS =
 liblidar_law.a: CMakeFiles/lidar_law.dir/lidar/lidar_law.c.o
 liblidar_law.a: CMakeFiles/lidar_law.dir/build.make
 liblidar_law.a: CMakeFiles/lidar_law.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lsh/work9/sorang/host_pc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library liblidar_law.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lsh/work12/sorang/host_pc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library liblidar_law.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/lidar_law.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/lidar_law.dir/link.txt --verbose=$(VERBOSE)
 
@@ -94,6 +94,6 @@ CMakeFiles/lidar_law.dir/clean:
 .PHONY : CMakeFiles/lidar_law.dir/clean
 
 CMakeFiles/lidar_law.dir/depend:
-	cd /home/lsh/work9/sorang/host_pc && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lsh/work9/sorang/host_pc /home/lsh/work9/sorang/host_pc /home/lsh/work9/sorang/host_pc /home/lsh/work9/sorang/host_pc /home/lsh/work9/sorang/host_pc/CMakeFiles/lidar_law.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/lsh/work12/sorang/host_pc && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lsh/work12/sorang/host_pc /home/lsh/work12/sorang/host_pc /home/lsh/work12/sorang/host_pc /home/lsh/work12/sorang/host_pc /home/lsh/work12/sorang/host_pc/CMakeFiles/lidar_law.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/lidar_law.dir/depend
 

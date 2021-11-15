@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/lsh/work9/sorang/host_pc/argument/argu.h
+/home/lsh/work12/sorang/host_pc/argument/argu.h
 
-/home/lsh/work9/sorang/host_pc/cmd/cmd.h
+/home/lsh/work12/sorang/host_pc/cmd/cmd.h
 stdio.h
 -
 stdlib.h
@@ -18,15 +18,15 @@ string.h
 unistd.h
 -
 
-/home/lsh/work9/sorang/host_pc/com/poll.h
+/home/lsh/work12/sorang/host_pc/com/poll.h
 
-/home/lsh/work9/sorang/host_pc/com/tcpip.h
+/home/lsh/work12/sorang/host_pc/com/tcpip.h
 
-/home/lsh/work9/sorang/host_pc/com/uart.h
+/home/lsh/work12/sorang/host_pc/com/uart.h
 
-/home/lsh/work9/sorang/host_pc/display/display.h
+/home/lsh/work12/sorang/host_pc/display/display.h
 
-/home/lsh/work9/sorang/host_pc/include/main.h
+/home/lsh/work12/sorang/host_pc/include/main.h
 stdio.h
 -
 stdlib.h
@@ -36,25 +36,25 @@ string.h
 unistd.h
 -
 
-/home/lsh/work9/sorang/host_pc/main.c
+/home/lsh/work12/sorang/host_pc/main.c
 include/main.h
-/home/lsh/work9/sorang/host_pc/include/main.h
+/home/lsh/work12/sorang/host_pc/include/main.h
 com/uart.h
-/home/lsh/work9/sorang/host_pc/com/uart.h
+/home/lsh/work12/sorang/host_pc/com/uart.h
 com/poll.h
-/home/lsh/work9/sorang/host_pc/com/poll.h
+/home/lsh/work12/sorang/host_pc/com/poll.h
 com/tcpip.h
-/home/lsh/work9/sorang/host_pc/com/tcpip.h
+/home/lsh/work12/sorang/host_pc/com/tcpip.h
 argument/argu.h
-/home/lsh/work9/sorang/host_pc/argument/argu.h
+/home/lsh/work12/sorang/host_pc/argument/argu.h
 teminel_key/esc_key.h
-/home/lsh/work9/sorang/host_pc/teminel_key/esc_key.h
+/home/lsh/work12/sorang/host_pc/teminel_key/esc_key.h
 timer/timer.h
-/home/lsh/work9/sorang/host_pc/timer/timer.h
+/home/lsh/work12/sorang/host_pc/timer/timer.h
 display/display.h
-/home/lsh/work9/sorang/host_pc/display/display.h
+/home/lsh/work12/sorang/host_pc/display/display.h
 cmd/cmd.h
-/home/lsh/work9/sorang/host_pc/cmd/cmd.h
+/home/lsh/work12/sorang/host_pc/cmd/cmd.h
 stdio.h
 -
 unistd.h
@@ -90,9 +90,9 @@ fcntl.h
 sys/poll.h
 -
 
-/home/lsh/work9/sorang/host_pc/teminel_key/esc_key.h
+/home/lsh/work12/sorang/host_pc/teminel_key/esc_key.h
 
-/home/lsh/work9/sorang/host_pc/timer/timer.h
+/home/lsh/work12/sorang/host_pc/timer/timer.h
 unistd.h
 -
 time.h

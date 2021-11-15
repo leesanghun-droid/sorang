@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/lsh/work9/sorang/host_pc/display/display.h
+/home/lsh/work12/sorang/host_pc/display/display.h
 
-/home/lsh/work9/sorang/host_pc/include/main.h
+/home/lsh/work12/sorang/host_pc/include/main.h
 stdio.h
 -
 stdlib.h
@@ -18,9 +18,9 @@ string.h
 unistd.h
 -
 
-/home/lsh/work9/sorang/host_pc/lidar/lidar_law.c
+/home/lsh/work12/sorang/host_pc/lidar/lidar_law.c
 ../include/main.h
-/home/lsh/work9/sorang/host_pc/include/main.h
+/home/lsh/work12/sorang/host_pc/include/main.h
 ../display/display.h
-/home/lsh/work9/sorang/host_pc/display/display.h
+/home/lsh/work12/sorang/host_pc/display/display.h
 

@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/lsh/work9/sorang/host_pc/argument/argu.c
+/home/lsh/work12/sorang/host_pc/argument/argu.c
 ../include/main.h
-/home/lsh/work9/sorang/host_pc/include/main.h
+/home/lsh/work12/sorang/host_pc/include/main.h
 
-/home/lsh/work9/sorang/host_pc/include/main.h
+/home/lsh/work12/sorang/host_pc/include/main.h
 stdio.h
 -
 stdlib.h

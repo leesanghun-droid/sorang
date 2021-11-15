@@ -11,9 +11,11 @@
 #include <X11/Xutil.h>
 #include <math.h>
 
+#define circle_size 60
+#define table_size 70
 #define PI 3.1415926
 #define size 0.2
-#define width  1000
+#define width  2000
 #define heigth  1000
 #define x_center 500
 #define y_center 500
@@ -37,7 +39,7 @@ if(display_x11==True)
   disp = XOpenDisplay(NULL) ;
   screen = DefaultScreen(disp);
   root = XDefaultRootWindow (disp);
-  win = XCreateSimpleWindow ( disp, root, 0, 0, width+500, heigth,
+  win = XCreateSimpleWindow ( disp, root, 0, 0, width, heigth,
                               2, BlackPixel (disp,0), WhitePixel(disp,0) );
 
   XMapWindow (disp, win);
@@ -66,14 +68,6 @@ void draw(u_int16_t arr[][2])
 {
   /////////////////  draw_origin CIRCLE START //////////////////////
 
-  printf("%d\r\n",arr[0][1]);
-  printf("%d\r\n",arr[1][1]);
-  printf("%d\r\n",arr[2][1]);
-  printf("%d\r\n",arr[3][1]);
-  printf("%d\r\n",arr[4][1]);
-  printf("%d\r\n",arr[5][1]);
-  printf("%d\r\n",arr[6][1]);
-
   double d_ch[7][2]={0};
 
   for(int i=0;i<7;i++)
@@ -82,17 +76,10 @@ void draw(u_int16_t arr[][2])
     d_ch[i][1]=(double)arr[i][1]*0.02929;
   }
 
-  printf("%0.3f\r\n",d_ch[0][1]);
-  printf("%0.3f\r\n",d_ch[1][1]);
-  printf("%0.3f\r\n",d_ch[2][1]);
-  printf("%0.3f\r\n",d_ch[3][1]);
-  printf("%0.3f\r\n",d_ch[4][1]);
-  printf("%0.3f\r\n",d_ch[5][1]);
-  printf("%0.3f\r\n",d_ch[6][1]);
 
+/////////////// RADAR CIRCLE START//////////////
 
-
-      for(int s =0; s<500; s+=83)
+      for(int s =0; s<420; s+=circle_size)
       for(double i=0; i<360;i=i+0.001)
           {
             float x_circle = cos(((i)*PI)/180)*(s);
@@ -114,8 +101,11 @@ void draw(u_int16_t arr[][2])
             byte_array[x_circle_pos][y_circle_pos]=0x00FF00; 
           }
 
+/////////////// RADAR CIRCLE END//////////////
 
-  float ch1_y = -sin(((90)*PI)/180)*(d_ch[0][1]/5)*83+y_center;
+/////////////// TARGET POINT START//////////////
+
+  float ch1_y = -sin(((90)*PI)/180)*(d_ch[0][1]/5)*circle_size+y_center;
   float ch1_x = x_center;
 
   if(ch1_y>980)
@@ -123,8 +113,8 @@ void draw(u_int16_t arr[][2])
   if(ch1_x>980)
   ch1_x=980;
 
-  float ch2_y = -sin(((30)*PI)/180)*(d_ch[1][1]/5)*83+y_center;
-  float ch2_x = -cos(((30)*PI)/180)*(d_ch[1][1]/5)*83+x_center;
+  float ch2_y = -sin(((30)*PI)/180)*(d_ch[1][1]/5)*circle_size+y_center;
+  float ch2_x = -cos(((30)*PI)/180)*(d_ch[1][1]/5)*circle_size+x_center;
 
     if(ch2_y>980)
   ch2_y=980;
@@ -132,8 +122,8 @@ void draw(u_int16_t arr[][2])
   ch2_x=980;
 
 
-  float ch3_y = sin(((30)*PI)/180)*(d_ch[2][1]/5)*83+y_center;
-  float ch3_x = -cos(((30)*PI)/180)*(d_ch[2][1]/5)*83+x_center;
+  float ch3_y = sin(((30)*PI)/180)*(d_ch[2][1]/5)*circle_size+y_center;
+  float ch3_x = -cos(((30)*PI)/180)*(d_ch[2][1]/5)*circle_size+x_center;
 
 
   if(ch3_y>980)
@@ -142,7 +132,7 @@ void draw(u_int16_t arr[][2])
   ch3_x=980;
 
 
-  float ch4_y = sin(((90)*PI)/180)*(d_ch[4][1]/5)*83+y_center;
+  float ch4_y = sin(((90)*PI)/180)*(d_ch[3][1]/5)*circle_size+y_center;
   float ch4_x = x_center;
 
 
@@ -152,8 +142,8 @@ void draw(u_int16_t arr[][2])
   ch4_x=980;
 
 
-  float ch5_y = -sin(((30)*PI)/180)*(d_ch[4][1]/5)*83+y_center;
-  float ch5_x = cos(((30)*PI)/180)*(d_ch[4][1]/5)*83+x_center;
+  float ch5_y = sin(((30)*PI)/180)*(d_ch[4][1]/5)*circle_size+y_center;
+  float ch5_x = cos(((30)*PI)/180)*(d_ch[4][1]/5)*circle_size+x_center;
   
   if(ch5_y>980)
   ch5_y=980;
@@ -161,8 +151,8 @@ void draw(u_int16_t arr[][2])
   ch5_x=980;
 
 
-  float ch6_y = sin(((30)*PI)/180)*(d_ch[5][1]/5)*83+y_center;
-  float ch6_x = cos(((30)*PI)/180)*(d_ch[5][1]/5)*83+x_center;
+  float ch6_y = -sin(((30)*PI)/180)*(d_ch[5][1]/5)*circle_size+y_center;
+  float ch6_x = cos(((30)*PI)/180)*(d_ch[5][1]/5)*circle_size+x_center;
 
   if(ch6_y>980)
   ch6_y=980;
@@ -185,12 +175,78 @@ void draw(u_int16_t arr[][2])
     if(d_ch[4][0]==1)
       byte_array[(int)ch5_y+j][(int)ch5_x+i]=0xFF0000;
     if(d_ch[5][0]==1)
-      byte_array[(int)ch6_y+j][(int)ch6_x+i]=0xF0000F;
+      byte_array[(int)ch6_y+j][(int)ch6_x+i]=0xFF0000;
+  }
+
+/////////////// TARGET POINT END//////////////
+
+////////////// DRAW TABLE START //////////////
+#define table_color 0xFFFFFF
+
+// column 1
+
+int table_start_point_x=1000;
+int table_start_point_y=200;
+
+int column_legth = 800;
+int row_legth = 600;
+
+int column_num = 7;
+int row_num = 4;
+
+
+for(int j=0; j<=column_num; j++)
+{
+  for(int i=0;i<column_legth;i++)
+  {
+    byte_array[table_start_point_y+(row_legth/column_num)*j][table_start_point_x+i]=table_color;
+    byte_array[table_start_point_y+(row_legth/column_num)*j+1][table_start_point_x+i]=table_color;
+    byte_array[table_start_point_y+(row_legth/column_num)*j+2][table_start_point_x+i]=table_color;
+  }
+}
+
+for(int j=0; j<=row_num; j++)
+{
+  for(int i=0;i<row_legth;i++)
+  {
+    byte_array[table_start_point_y+i][table_start_point_x+(column_legth/row_num)*j]=table_color;
+    byte_array[table_start_point_y+i][table_start_point_x+(column_legth/row_num)*j+1]=table_color;
+    byte_array[table_start_point_y+i][table_start_point_x+(column_legth/row_num)*j+2]=table_color;
+  }
+}
+
+//// radar on&off ///
+  for(int i=-10;i<10;i++)
+  for(int j=-10;j<10;j++)
+  {
+    for(int k=0;k<6;k++)
+    if(d_ch[k][0]==1)
+    {
+      int point_y = table_start_point_y+(row_legth/column_num)*(1+k)+(row_legth/column_num)/2;
+      int point_x = table_start_point_x+(column_legth/row_num)*1+(column_legth/row_num)/2;
+      byte_array[point_y+j][point_x+i]=0x00FF00;
+    }
+  }
+
+//// avoidance///
+  for(int i=-10;i<10;i++)
+  for(int j=-10;j<10;j++)
+  {
+    for(int k=0;k<6;k++)
+    if(d_ch[k][1]<5)
+    {
+      int point_y = table_start_point_y+(row_legth/column_num)*(1+k)+(row_legth/column_num)/2;
+      int point_x = table_start_point_x+(column_legth/row_num)*3+(column_legth/row_num)/2;
+      byte_array[point_y+j][point_x+i]=0xFF0000;
+    }
   }
 
 
+////////////// DRAW TABLE END //////////////
 
-/////////////////  draw_origin CIRCLE END //////////////////////
+
+
+/////////////////  DRAW START//////////////////////
 
 
     // PutPixel
@@ -209,139 +265,48 @@ void draw(u_int16_t arr[][2])
           }
         
         char ch7[100]={0};
+
+
         XPutImage(disp, win, gc, image, 0, 0, 0, 0, width, heigth);
-        XDrawString(disp, win, gc,500, 0, "30M", 4);
-        XDrawString(disp, win, gc,500, 73, "25M", 4);
-        XDrawString(disp, win, gc,500, 158, "20M", 4);
-        XDrawString(disp, win, gc,500, 241, "15M", 4);
-        XDrawString(disp, win, gc,500, 324, "10M", 4);
-        XDrawString(disp, win, gc,500, 407, "5M", 2);
+        XDrawString(disp, win, gc,500, 490-circle_size*6, "30M", 4);
+        XDrawString(disp, win, gc,500, 490-circle_size*5, "25M", 4);
+        XDrawString(disp, win, gc,500, 490-circle_size*4, "20M", 4);
+        XDrawString(disp, win, gc,500, 490-circle_size*3, "15M", 4);
+        XDrawString(disp, win, gc,500, 490-circle_size*2, "10M", 4);
+        XDrawString(disp, win, gc,500, 490-circle_size*1, "5M", 2);
+
+///////////////////// num ////////////////
+        XDrawString(disp, win, gc,table_start_point_x+(column_legth/row_num)/2, table_start_point_y+(row_legth/column_num)*1+(row_legth/column_num)/2+10, "1", 1);
+        XDrawString(disp, win, gc,table_start_point_x+(column_legth/row_num)/2, table_start_point_y+(row_legth/column_num)*2+(row_legth/column_num)/2+10, "2", 1);
+        XDrawString(disp, win, gc,table_start_point_x+(column_legth/row_num)/2, table_start_point_y+(row_legth/column_num)*3+(row_legth/column_num)/2+10, "3", 1);
+        XDrawString(disp, win, gc,table_start_point_x+(column_legth/row_num)/2, table_start_point_y+(row_legth/column_num)*4+(row_legth/column_num)/2+10, "4", 1);
+        XDrawString(disp, win, gc,table_start_point_x+(column_legth/row_num)/2, table_start_point_y+(row_legth/column_num)*5+(row_legth/column_num)/2+10, "5", 1);
+        XDrawString(disp, win, gc,table_start_point_x+(column_legth/row_num)/2, table_start_point_y+(row_legth/column_num)*6+(row_legth/column_num)/2+10, "6", 1);
+
+////////////////// title ///////////////////
+        XDrawString(disp, win, gc,table_start_point_x+(column_legth/row_num)*0+50, table_start_point_y + (row_legth/column_num)/2+10, "Radar num", 9);
+        XDrawString(disp, win, gc,table_start_point_x+(column_legth/row_num)*1+20, table_start_point_y + (row_legth/column_num)/2+10, "Radar on/off", 12);
+        XDrawString(disp, win, gc,table_start_point_x+(column_legth/row_num)*2+20, table_start_point_y + (row_legth/column_num)/2+10, "Radar distance", 14);
+        XDrawString(disp, win, gc,table_start_point_x+(column_legth/row_num)*3+50, table_start_point_y + (row_legth/column_num)/2+10, "avoidance", 9);
+
+////////////////// distance ///////////////////
+
+
+        char law_data_text[6][30]={0};
+        for(int i=0;i<6;i++)
+        {
+          sprintf(law_data_text[i],"%d",arr[i][1]);
+          XDrawString(disp, win, gc,table_start_point_x+(column_legth/row_num)*2 + (column_legth/row_num)/2, table_start_point_y+(row_legth/column_num)*(i+1)+(row_legth/column_num)/2+10, law_data_text[i], sizeof(law_data_text[i])/sizeof(char));
+        }
+
+
+
 
         sprintf(ch7,"%0.1f",d_ch[6][1]);
 
-        XDrawString(disp, win, gc,940, 850, ch7, 4);
+        XDrawString(disp, win, gc,840, 750, ch7, 4);
 
         XFlush(disp);
 }
-/*
-void lidar_draw(float *angle,float *distance,int length)
-{
 
-//printf("angle[0]: %5.2f\r\n",angle[0]);
-//printf("d_gyro: %5.2f,gyro_default: %5.2f\r\n",d_gyro,gyro_default);
-double robot_angle_offset = gyro_default-d_gyro;
-//printf("robot_angle_offset: %5.2f\r\n",robot_angle_offset);
-
-      for(int i=0; i<length;i++)
-          {
-            float offset_angle = angle[i]+rotate;
-            double x_pos = -cos(((offset_angle-robot_angle_offset)*PI)/180)*distance[i]*size;
-            double y_pos = -sin(((offset_angle-robot_angle_offset)*PI)/180)*distance[i]*size;
-
-            int codi_x = x_pos/1+x_center;
-            int codi_y = y_pos/1+y_center;
-
-            codi_y=codi_y-2;
-            codi_x=codi_x-2;
-
-            if(codi_x>(width-10) || codi_x<10 || codi_y>(heigth-10) || codi_y<10)
-            {
-               codi_x=0;
-               codi_y=0;
-            }
-
-            for(int i=0;i<4;i++)
-            for(int j=0;j<4;j++)
-            {
-               byte_array[codi_y+j][codi_x+i]=0xFF0000;
-            }
-          }
-
-/////////////////////  lidar quad  //////////////////////
-
-for(int x=0; x<width; x++)
-{
-  for(int i=0;i<3;i++)
-  {
-    byte_array[i][x]=0x000000;
-    byte_array[496+i][x]=0x000000;
-  }
-}
-for(int y=0; y<heigth; y++)
-{
-  for(int i=0;i<3;i++)
-  {
-    byte_array[y][i]=0x000000;
-    byte_array[y][496+i]=0x000000;
-  }
-}
-
-/////////////////////  lidar quad end  //////////////////
-
-XFlush(disp); i<360;i=i+0.1)
-          {
-            float x_circle = cos(((i+rotate_angle)*PI)/180)*(40)*size;
-            float y_circle = -sin(((i+rotate_angle)*PI)/180)*(40)*size;
-            int x_circle_pos = x_circle/1+x_center;
-            int y_circle_pos = y_circle/1+y_center;
-            byte_array[y_circle_pos][x_circle_pos]=0x0000FF; 
-          }
-
-         for(int i=-5;i<5;i++)
-         for(int j=-5;j<5;j++)
-         {
-            byte_array[i+x_center][j+y_center]=0xFFFFFF; 
-         }
-
-
-/////////////////  draw_lidar CIRCLE END //////////////////////
-/////////////////  draw_origin CIRCLE START //////////////////////
-
-      for(double i=0; i<360;i=i+0.1)
-          {
-            float x_circle = cos(((i+rotate_angle)*PI)/180)*(170)*size;
-            float y_circle = -sin(((i+rotate_angle)*PI)/180)*(170)*size;
-            int x_circle_pos = x_circle/1+x_center+cos((robot_angle_offset*PI)/180)*13;
-            int y_circle_pos = y_circle/1+y_center-sin((robot_angle_offset*PI)/180)*13;
-            byte_array[y_circle_pos][x_circle_pos]=0x0000FF; 
-          }
-
-
-/////////////////  draw_origin CIRCLE END //////////////////////
-
-
-    // PutPixel
-    for(int y=0;y<heigth;y++)
-         for(int x=0;x<width;x++)
-         {
-                  XPutPixel(image, x, y,byte_array[y][x]);
-         }
-
-
-    // byte_array init white
-         for(int y=0; y<heigth;y++)
-         for(int x=0; x<width;x++)
-          {
-            byte_array[y][x]=0xffffff; //b + g*256 + r*65536
-          }
-
-
-         XPutImage(disp, win, gc, image, 0, 0, 0, 0, width, heigth);
-}
- */
-/////////////////  Lidar data //////////////////////
-
-/*
-  void display(float *angle,float *distance,int length)
-  {
-    if(display_lidar==True)
-    {
-      lidar_draw(angle,distance,length);
-    }
-
-    if(display_control==True)
-    {
-
-    }
-  }
-  */
+/////////////////  DRAW END //////////////////////

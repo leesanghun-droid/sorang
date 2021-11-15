@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/lsh/work9/sorang/host_pc/com/tcpip.c
+/home/lsh/work12/sorang/host_pc/com/tcpip.c
 ../include/main.h
-/home/lsh/work9/sorang/host_pc/include/main.h
+/home/lsh/work12/sorang/host_pc/include/main.h
 stdio.h
 -
 stdlib.h
@@ -26,7 +26,7 @@ netinet/in.h
 netdb.h
 -
 
-/home/lsh/work9/sorang/host_pc/include/main.h
+/home/lsh/work12/sorang/host_pc/include/main.h
 stdio.h
 -
 stdlib.h

@@ -6,25 +6,25 @@
 
 #IncludeRegexTransform: 
 
-/home/lsh/work9/sorang/host_pc/com/poll.h
+/home/lsh/work12/sorang/host_pc/com/poll.h
 
-/home/lsh/work9/sorang/host_pc/com/uart.c
+/home/lsh/work12/sorang/host_pc/com/uart.c
 ../include/main.h
-/home/lsh/work9/sorang/host_pc/include/main.h
+/home/lsh/work12/sorang/host_pc/include/main.h
 uart.h
-/home/lsh/work9/sorang/host_pc/com/uart.h
+/home/lsh/work12/sorang/host_pc/com/uart.h
 poll.h
-/home/lsh/work9/sorang/host_pc/com/poll.h
+/home/lsh/work12/sorang/host_pc/com/poll.h
 termios.h
 -
 fcntl.h
 -
 ../lidar/lidar_law.h
-/home/lsh/work9/sorang/host_pc/lidar/lidar_law.h
+/home/lsh/work12/sorang/host_pc/lidar/lidar_law.h
 
-/home/lsh/work9/sorang/host_pc/com/uart.h
+/home/lsh/work12/sorang/host_pc/com/uart.h
 
-/home/lsh/work9/sorang/host_pc/include/main.h
+/home/lsh/work12/sorang/host_pc/include/main.h
 stdio.h
 -
 stdlib.h
@@ -34,5 +34,5 @@ string.h
 unistd.h
 -
 
-/home/lsh/work9/sorang/host_pc/lidar/lidar_law.h
+/home/lsh/work12/sorang/host_pc/lidar/lidar_law.h
 

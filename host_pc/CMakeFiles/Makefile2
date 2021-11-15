@@ -44,10 +44,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lsh/work9/sorang/host_pc
+CMAKE_SOURCE_DIR = /home/lsh/work12/sorang/host_pc
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lsh/work9/sorang/host_pc
+CMAKE_BINARY_DIR = /home/lsh/work12/sorang/host_pc
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -96,14 +96,14 @@ clean: CMakeFiles/main.dir/clean
 CMakeFiles/lidar_law.dir/all:
 	$(MAKE) -f CMakeFiles/lidar_law.dir/build.make CMakeFiles/lidar_law.dir/depend
 	$(MAKE) -f CMakeFiles/lidar_law.dir/build.make CMakeFiles/lidar_law.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lsh/work9/sorang/host_pc/CMakeFiles --progress-num=9,10 "Built target lidar_law"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lsh/work12/sorang/host_pc/CMakeFiles --progress-num=9,10 "Built target lidar_law"
 .PHONY : CMakeFiles/lidar_law.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/lidar_law.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work9/sorang/host_pc/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work12/sorang/host_pc/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/lidar_law.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work9/sorang/host_pc/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work12/sorang/host_pc/CMakeFiles 0
 .PHONY : CMakeFiles/lidar_law.dir/rule
 
 # Convenience name for target.
@@ -123,14 +123,14 @@ CMakeFiles/lidar_law.dir/clean:
 CMakeFiles/poll.dir/all:
 	$(MAKE) -f CMakeFiles/poll.dir/build.make CMakeFiles/poll.dir/depend
 	$(MAKE) -f CMakeFiles/poll.dir/build.make CMakeFiles/poll.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lsh/work9/sorang/host_pc/CMakeFiles --progress-num=17,18 "Built target poll"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lsh/work12/sorang/host_pc/CMakeFiles --progress-num=17,18 "Built target poll"
 .PHONY : CMakeFiles/poll.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/poll.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work9/sorang/host_pc/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work12/sorang/host_pc/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/poll.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work9/sorang/host_pc/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work12/sorang/host_pc/CMakeFiles 0
 .PHONY : CMakeFiles/poll.dir/rule
 
 # Convenience name for target.
@@ -150,14 +150,14 @@ CMakeFiles/poll.dir/clean:
 CMakeFiles/tcpip.dir/all:
 	$(MAKE) -f CMakeFiles/tcpip.dir/build.make CMakeFiles/tcpip.dir/depend
 	$(MAKE) -f CMakeFiles/tcpip.dir/build.make CMakeFiles/tcpip.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lsh/work9/sorang/host_pc/CMakeFiles --progress-num=19,20 "Built target tcpip"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lsh/work12/sorang/host_pc/CMakeFiles --progress-num=19,20 "Built target tcpip"
 .PHONY : CMakeFiles/tcpip.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/tcpip.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work9/sorang/host_pc/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work12/sorang/host_pc/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/tcpip.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work9/sorang/host_pc/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work12/sorang/host_pc/CMakeFiles 0
 .PHONY : CMakeFiles/tcpip.dir/rule
 
 # Convenience name for target.
@@ -177,14 +177,14 @@ CMakeFiles/tcpip.dir/clean:
 CMakeFiles/uart.dir/all:
 	$(MAKE) -f CMakeFiles/uart.dir/build.make CMakeFiles/uart.dir/depend
 	$(MAKE) -f CMakeFiles/uart.dir/build.make CMakeFiles/uart.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lsh/work9/sorang/host_pc/CMakeFiles --progress-num=23,24 "Built target uart"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lsh/work12/sorang/host_pc/CMakeFiles --progress-num=23,24 "Built target uart"
 .PHONY : CMakeFiles/uart.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/uart.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work9/sorang/host_pc/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work12/sorang/host_pc/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/uart.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work9/sorang/host_pc/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work12/sorang/host_pc/CMakeFiles 0
 .PHONY : CMakeFiles/uart.dir/rule
 
 # Convenience name for target.
@@ -204,14 +204,14 @@ CMakeFiles/uart.dir/clean:
 CMakeFiles/argu.dir/all:
 	$(MAKE) -f CMakeFiles/argu.dir/build.make CMakeFiles/argu.dir/depend
 	$(MAKE) -f CMakeFiles/argu.dir/build.make CMakeFiles/argu.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lsh/work9/sorang/host_pc/CMakeFiles --progress-num=1,2 "Built target argu"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lsh/work12/sorang/host_pc/CMakeFiles --progress-num=1,2 "Built target argu"
 .PHONY : CMakeFiles/argu.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/argu.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work9/sorang/host_pc/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work12/sorang/host_pc/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/argu.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work9/sorang/host_pc/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work12/sorang/host_pc/CMakeFiles 0
 .PHONY : CMakeFiles/argu.dir/rule
 
 # Convenience name for target.
@@ -231,14 +231,14 @@ CMakeFiles/argu.dir/clean:
 CMakeFiles/timer.dir/all:
 	$(MAKE) -f CMakeFiles/timer.dir/build.make CMakeFiles/timer.dir/depend
 	$(MAKE) -f CMakeFiles/timer.dir/build.make CMakeFiles/timer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lsh/work9/sorang/host_pc/CMakeFiles --progress-num=21,22 "Built target timer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lsh/work12/sorang/host_pc/CMakeFiles --progress-num=21,22 "Built target timer"
 .PHONY : CMakeFiles/timer.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/timer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work9/sorang/host_pc/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work12/sorang/host_pc/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/timer.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work9/sorang/host_pc/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work12/sorang/host_pc/CMakeFiles 0
 .PHONY : CMakeFiles/timer.dir/rule
 
 # Convenience name for target.
@@ -258,14 +258,14 @@ CMakeFiles/timer.dir/clean:
 CMakeFiles/motor.dir/all:
 	$(MAKE) -f CMakeFiles/motor.dir/build.make CMakeFiles/motor.dir/depend
 	$(MAKE) -f CMakeFiles/motor.dir/build.make CMakeFiles/motor.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lsh/work9/sorang/host_pc/CMakeFiles --progress-num=13,14 "Built target motor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lsh/work12/sorang/host_pc/CMakeFiles --progress-num=13,14 "Built target motor"
 .PHONY : CMakeFiles/motor.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/motor.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work9/sorang/host_pc/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work12/sorang/host_pc/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/motor.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work9/sorang/host_pc/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work12/sorang/host_pc/CMakeFiles 0
 .PHONY : CMakeFiles/motor.dir/rule
 
 # Convenience name for target.
@@ -285,14 +285,14 @@ CMakeFiles/motor.dir/clean:
 CMakeFiles/display.dir/all:
 	$(MAKE) -f CMakeFiles/display.dir/build.make CMakeFiles/display.dir/depend
 	$(MAKE) -f CMakeFiles/display.dir/build.make CMakeFiles/display.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lsh/work9/sorang/host_pc/CMakeFiles --progress-num=5,6 "Built target display"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lsh/work12/sorang/host_pc/CMakeFiles --progress-num=5,6 "Built target display"
 .PHONY : CMakeFiles/display.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/display.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work9/sorang/host_pc/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work12/sorang/host_pc/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/display.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work9/sorang/host_pc/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work12/sorang/host_pc/CMakeFiles 0
 .PHONY : CMakeFiles/display.dir/rule
 
 # Convenience name for target.
@@ -312,14 +312,14 @@ CMakeFiles/display.dir/clean:
 CMakeFiles/esc_key.dir/all:
 	$(MAKE) -f CMakeFiles/esc_key.dir/build.make CMakeFiles/esc_key.dir/depend
 	$(MAKE) -f CMakeFiles/esc_key.dir/build.make CMakeFiles/esc_key.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lsh/work9/sorang/host_pc/CMakeFiles --progress-num=7,8 "Built target esc_key"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lsh/work12/sorang/host_pc/CMakeFiles --progress-num=7,8 "Built target esc_key"
 .PHONY : CMakeFiles/esc_key.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/esc_key.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work9/sorang/host_pc/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work12/sorang/host_pc/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/esc_key.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work9/sorang/host_pc/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work12/sorang/host_pc/CMakeFiles 0
 .PHONY : CMakeFiles/esc_key.dir/rule
 
 # Convenience name for target.
@@ -339,14 +339,14 @@ CMakeFiles/esc_key.dir/clean:
 CMakeFiles/cmd.dir/all:
 	$(MAKE) -f CMakeFiles/cmd.dir/build.make CMakeFiles/cmd.dir/depend
 	$(MAKE) -f CMakeFiles/cmd.dir/build.make CMakeFiles/cmd.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lsh/work9/sorang/host_pc/CMakeFiles --progress-num=3,4 "Built target cmd"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lsh/work12/sorang/host_pc/CMakeFiles --progress-num=3,4 "Built target cmd"
 .PHONY : CMakeFiles/cmd.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/cmd.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work9/sorang/host_pc/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work12/sorang/host_pc/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/cmd.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work9/sorang/host_pc/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work12/sorang/host_pc/CMakeFiles 0
 .PHONY : CMakeFiles/cmd.dir/rule
 
 # Convenience name for target.
@@ -366,14 +366,14 @@ CMakeFiles/cmd.dir/clean:
 CMakeFiles/move.dir/all:
 	$(MAKE) -f CMakeFiles/move.dir/build.make CMakeFiles/move.dir/depend
 	$(MAKE) -f CMakeFiles/move.dir/build.make CMakeFiles/move.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lsh/work9/sorang/host_pc/CMakeFiles --progress-num=15,16 "Built target move"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lsh/work12/sorang/host_pc/CMakeFiles --progress-num=15,16 "Built target move"
 .PHONY : CMakeFiles/move.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/move.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work9/sorang/host_pc/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work12/sorang/host_pc/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/move.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work9/sorang/host_pc/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work12/sorang/host_pc/CMakeFiles 0
 .PHONY : CMakeFiles/move.dir/rule
 
 # Convenience name for target.
@@ -390,27 +390,27 @@ CMakeFiles/move.dir/clean:
 # Target rules for target CMakeFiles/main.dir
 
 # All Build rule for target.
-CMakeFiles/main.dir/all: CMakeFiles/tcpip.dir/all
-CMakeFiles/main.dir/all: CMakeFiles/poll.dir/all
-CMakeFiles/main.dir/all: CMakeFiles/cmd.dir/all
-CMakeFiles/main.dir/all: CMakeFiles/move.dir/all
 CMakeFiles/main.dir/all: CMakeFiles/uart.dir/all
+CMakeFiles/main.dir/all: CMakeFiles/poll.dir/all
+CMakeFiles/main.dir/all: CMakeFiles/move.dir/all
+CMakeFiles/main.dir/all: CMakeFiles/lidar_law.dir/all
+CMakeFiles/main.dir/all: CMakeFiles/tcpip.dir/all
+CMakeFiles/main.dir/all: CMakeFiles/argu.dir/all
+CMakeFiles/main.dir/all: CMakeFiles/timer.dir/all
 CMakeFiles/main.dir/all: CMakeFiles/motor.dir/all
 CMakeFiles/main.dir/all: CMakeFiles/display.dir/all
 CMakeFiles/main.dir/all: CMakeFiles/esc_key.dir/all
-CMakeFiles/main.dir/all: CMakeFiles/argu.dir/all
-CMakeFiles/main.dir/all: CMakeFiles/timer.dir/all
-CMakeFiles/main.dir/all: CMakeFiles/lidar_law.dir/all
+CMakeFiles/main.dir/all: CMakeFiles/cmd.dir/all
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/depend
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lsh/work9/sorang/host_pc/CMakeFiles --progress-num=11,12 "Built target main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lsh/work12/sorang/host_pc/CMakeFiles --progress-num=11,12 "Built target main"
 .PHONY : CMakeFiles/main.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work9/sorang/host_pc/CMakeFiles 24
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work12/sorang/host_pc/CMakeFiles 24
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work9/sorang/host_pc/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsh/work12/sorang/host_pc/CMakeFiles 0
 .PHONY : CMakeFiles/main.dir/rule
 
 # Convenience name for target.

@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/lsh/work9/sorang/host_pc/cmd/cmd.h
+/home/lsh/work12/sorang/host_pc/cmd/cmd.h
 stdio.h
 -
 stdlib.h
@@ -16,7 +16,7 @@ string.h
 unistd.h
 -
 
-/home/lsh/work9/sorang/host_pc/move/move.c
+/home/lsh/work12/sorang/host_pc/move/move.c
 ../cmd/cmd.h
-/home/lsh/work9/sorang/host_pc/cmd/cmd.h
+/home/lsh/work12/sorang/host_pc/cmd/cmd.h
 

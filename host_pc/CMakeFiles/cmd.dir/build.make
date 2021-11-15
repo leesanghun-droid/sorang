@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lsh/work9/sorang/host_pc
+CMAKE_SOURCE_DIR = /home/lsh/work12/sorang/host_pc
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lsh/work9/sorang/host_pc
+CMAKE_BINARY_DIR = /home/lsh/work12/sorang/host_pc
 
 # Include any dependencies generated for this target.
 include CMakeFiles/cmd.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/cmd.dir/flags.make
 
 CMakeFiles/cmd.dir/cmd/cmd.c.o: CMakeFiles/cmd.dir/flags.make
 CMakeFiles/cmd.dir/cmd/cmd.c.o: cmd/cmd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lsh/work9/sorang/host_pc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/cmd.dir/cmd/cmd.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cmd.dir/cmd/cmd.c.o   -c /home/lsh/work9/sorang/host_pc/cmd/cmd.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lsh/work12/sorang/host_pc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/cmd.dir/cmd/cmd.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cmd.dir/cmd/cmd.c.o   -c /home/lsh/work12/sorang/host_pc/cmd/cmd.c
 
 CMakeFiles/cmd.dir/cmd/cmd.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/cmd.dir/cmd/cmd.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lsh/work9/sorang/host_pc/cmd/cmd.c > CMakeFiles/cmd.dir/cmd/cmd.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lsh/work12/sorang/host_pc/cmd/cmd.c > CMakeFiles/cmd.dir/cmd/cmd.c.i
 
 CMakeFiles/cmd.dir/cmd/cmd.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cmd.dir/cmd/cmd.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lsh/work9/sorang/host_pc/cmd/cmd.c -o CMakeFiles/cmd.dir/cmd/cmd.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lsh/work12/sorang/host_pc/cmd/cmd.c -o CMakeFiles/cmd.dir/cmd/cmd.c.s
 
 # Object files for target cmd
 cmd_OBJECTS = \
@@ -80,7 +80,7 @@ cmd_EXTERNAL_OBJECTS =
 libcmd.a: CMakeFiles/cmd.dir/cmd/cmd.c.o
 libcmd.a: CMakeFiles/cmd.dir/build.make
 libcmd.a: CMakeFiles/cmd.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lsh/work9/sorang/host_pc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libcmd.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lsh/work12/sorang/host_pc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libcmd.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/cmd.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cmd.dir/link.txt --verbose=$(VERBOSE)
 
@@ -94,6 +94,6 @@ CMakeFiles/cmd.dir/clean:
 .PHONY : CMakeFiles/cmd.dir/clean
 
 CMakeFiles/cmd.dir/depend:
-	cd /home/lsh/work9/sorang/host_pc && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lsh/work9/sorang/host_pc /home/lsh/work9/sorang/host_pc /home/lsh/work9/sorang/host_pc /home/lsh/work9/sorang/host_pc /home/lsh/work9/sorang/host_pc/CMakeFiles/cmd.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/lsh/work12/sorang/host_pc && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lsh/work12/sorang/host_pc /home/lsh/work12/sorang/host_pc /home/lsh/work12/sorang/host_pc /home/lsh/work12/sorang/host_pc /home/lsh/work12/sorang/host_pc/CMakeFiles/cmd.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/cmd.dir/depend
 
